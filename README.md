@@ -1,6 +1,6 @@
 ## Introduction
 
-![screenshot](https://raw.githubusercontent.com/leandrocfe/filament-widget-examples/master/screenshots/example-1.jpg)
+![screenshot](https://raw.githubusercontent.com/leandrocfe/filament-widget-examples/main/screenshots/example-1.png)
 
 In this project, we will explore how to use Filament widgets to create statistic cards that display user statistics about the user table. We will also see how to refresh the widgets when the user table is changed, using Livewire lifecycle hooks and events.
 
