@@ -3,7 +3,7 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\UserResource\Pages;
-use App\Filament\Resources\UserResource\RelationManagers;
+use App\Filament\Resources\UserResource\Widgets\UserOverview;
 use App\Models\User;
 use Filament\Forms;
 use Filament\Resources\Form;
@@ -11,8 +11,6 @@ use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
 use Filament\Tables\Filters\TernaryFilter;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class UserResource extends Resource
 {
@@ -68,6 +66,13 @@ class UserResource extends Resource
     {
         return [
             'index' => Pages\ManageUsers::route('/'),
+        ];
+    }
+
+    public static function getWidgets(): array
+    {
+        return [
+            UserOverview::class,
         ];
     }
 }
