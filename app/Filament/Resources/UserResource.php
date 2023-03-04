@@ -10,7 +10,6 @@ use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
-use Filament\Tables\Filters\TernaryFilter;
 
 class UserResource extends Resource
 {
@@ -50,8 +49,8 @@ class UserResource extends Resource
                     ->date(),
             ])
             ->filters([
-                TernaryFilter::make('is_admin'),
-                TernaryFilter::make('is_active'),
+                Tables\Filters\TernaryFilter::make('is_admin'),
+                Tables\Filters\TernaryFilter::make('is_active'),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
